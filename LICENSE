@@ -1,7 +1,11 @@
                     GNU AFFERO GENERAL PUBLIC LICENSE
                        Version 3, 19 November 2007
 
+<<<<<<< HEAD
     Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
+=======
+ Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
+>>>>>>> 7a39c0ceab42152eabac5483ec9089f39d2877b8
  Everyone is permitted to copy and distribute verbatim copies
  of this license document, but changing it is not allowed.
 
@@ -17,7 +21,11 @@ our General Public Licenses are intended to guarantee your freedom to
 share and change all versions of a program--to make sure it remains free
 software for all its users.
 
+<<<<<<< HEAD
 When we speak of free software, we are referring to freedom, not
+=======
+  When we speak of free software, we are referring to freedom, not
+>>>>>>> 7a39c0ceab42152eabac5483ec9089f39d2877b8
 price.  Our General Public Licenses are designed to make sure that you
 have the freedom to distribute copies of free software (and charge for
 them if you wish), that you receive source code or can get it if you
@@ -658,4 +666,8 @@ specific requirements.
   You should also get your employer (if you work as a programmer) or school,
 if any, to sign a "copyright disclaimer" for the program, if necessary.
 For more information on this, and how to apply and follow the GNU AGPL, see
+<<<<<<< HEAD
 <https://www.gnu.org/licenses/>.
+=======
+<https://www.gnu.org/licenses/>.
+>>>>>>> 7a39c0ceab42152eabac5483ec9089f39d2877b8
