@@ -1,0 +1,28 @@
+<!-- {% if customer_list %}
+    <ul>
+        {% for customer in customer_list %}
+        <li><a href="{% url 'customers:detail' customer.id %}">{{ customer.first_name }}</a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No customers are available.</p>
+{% endif %}         -->
+<h1>Customers</h1>
+{% if customer_list %}
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for customer in customer_list %}
+            <tr>
+                <td><a href="{% url 'customers:detail' customer.id %}">{{ customer.first_name}} {{ customer.last_name }}</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <p>No customers to display.</p>
+{% endif %}        

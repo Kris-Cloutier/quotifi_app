@@ -23,4 +23,4 @@ class CustomerInfo(models.Model):
 
     # Idenitfy self
     def __str__(self):
-        return self.first_name + self.last_name
+        return self.first_name + ' ' + self.last_name
