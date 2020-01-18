@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'pages.apps.PagesConfig',
+    'trs.apps.TrsConfig',
     'customers.apps.CustomersConfig',
     'polls.apps.PollsConfig',
     'django.contrib.admin',
@@ -137,3 +139,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = 'staticfiles'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]

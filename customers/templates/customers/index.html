@@ -7,6 +7,9 @@
 {% else %}
     <p>No customers are available.</p>
 {% endif %}         -->
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'customers/style.css' %}">
+
 <h1>Customers</h1>
 {% if customer_list %}
     <table>
