@@ -10,7 +10,7 @@
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'pages/dashboard.css' %}">
 
-    <title>Quotifi App | New Customer</title>
+    <title>Quotifi App | Blinds Brothers</title>
   </head>
   <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
     <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Blinds Brothers</a>
@@ -28,15 +28,15 @@
         <div class="sidebar-sticky">
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link active" href="{% url 'pages:home' %}">
+              <a class="nav-link active" href="#">
                 <span data-feather="home"></span>
-                Dashboard 
+                Dashboard <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{% url 'customers:index' %}">
                 <span data-feather="file"></span>
-                Customers <span class="sr-only">(current)</span>
+                Customers
               </a>
             </li>
             <li class="nav-item">
@@ -84,11 +84,11 @@
   
       <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-          <h1 class="h2">New Customer</h1>
+          <h1 class="h2">Dashboard</h1>
           <div class="btn-toolbar mb-2 mb-md-0">
             <div class="btn-group mr-2">
-                <a href="{% url 'pages:newCustomer' %}"class="btn btn-sm btn-outline-secondary">New Customer</a>
-                <a href="{% url 'pages:newOrder' %}" class="btn btn-sm btn-outline-secondary">New Order</a>
+              <a href="{% url 'pages:new_customer' %}"class="btn btn-sm btn-outline-secondary">New Customer</a>
+              <a href="{% url 'pages:new_order' %}" class="btn btn-sm btn-outline-secondary">New Order</a>
             </div>
             <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
               <span data-feather="calendar"></span>
@@ -144,5 +144,6 @@
     <script src="{% static 'pages/dashboard.js' %}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
   </body>
 </html>
