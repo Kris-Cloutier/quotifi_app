@@ -1,20 +1,22 @@
-<h1>Customer Details</h1>
-<h2>Customer Information</h2>
-<table>
-    <thead>
+{% extends "base.html" %}    
+
+{% block content %}
+<h4>Customer Information</h4>
+<table class="table">
+    <thead class="thead-dark">
         <tr>
-            <th>Name</th>
-            <th>Address</th>
-            <th>City</th>
-            <th>State</th>
-            <th>Zipcode</th>
-            <th>Mobile</th>
-            <th>Landline</th>
-            <th>Email 1</th>
-            <th>Email 2</th>
-            <th>Contact</th>
-            <th>Refferal</th>
-            <th>Notes</th>
+            <th scope="col">Name</th>
+            <th scope="col">Address</th>
+            <th scope="col">City</th>
+            <th scope="col">State</th>
+            <th scope="col">Zipcode</th>
+            <th scope="col">Mobile</th>
+            <th scope="col">Landline</th>
+            <th scope="col">Email 1</th>
+            <th scope="col">Email 2</th>
+            <th scope="col">Contact</th>
+            <th scope="col">Refferal</th>
+            <th scope="col">Notes</th>
         </tr>
     </thead>
     <tbody>
@@ -60,3 +62,5 @@
 
     </tbody>
 </table>
+
+{% endblock %}

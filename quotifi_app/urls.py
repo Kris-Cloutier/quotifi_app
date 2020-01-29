@@ -15,10 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from django.conf.urls.static import static
+
+from .views import home
+from users.views import login_view, logout_view
+
 
 urlpatterns = [
-    path('', include('pages.urls')),
+    path('orders/', include('orders.urls')),
+    path('products/', include('products.urls')),
+    path('dashboard/', include('dashboard.urls')),
     path('customers/', include('customers.urls', namespace='customer')),
-    path('polls/', include('polls.urls')),
     path('admin/', admin.site.urls),
+    path('users/login', login_view, name='login'),
+    path('users/logout', logout_view, name='logout'),
 ]

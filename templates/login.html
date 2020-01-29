@@ -1,0 +1,60 @@
+{% comment %} <!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Login</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit">
+        </form>
+    </body>
+</html> {% endcomment %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'users/floating-labels.css' %}">
+
+    <title>Quotifi App | {{ title_text}}</title>
+  </head>
+
+  <form class="form-signin" method="POST" action="login">
+  {% csrf_token %}
+    <div class="text-center mb-4">
+      {% load static %}
+      <img class="mb-4" src="{% static 'users/quotifi-logo.png' %}" alt="" width="72" height="72">
+      <h1 class="h3 mb-3 font-weight-normal">Sign In</h1>
+      <p>Please sign in to your account to access your dashboard.</p>
+    </div>
+
+    {{ form.non_field_errors }}
+
+    <div class="form-label-group">
+      {{ form.username }}
+      {{ form.username.label_tag }}
+      {{ form.username.errors }}
+    </div>
+
+    <div class="form-label-group">
+      {{ form.password }}
+      {{ form.password.label_tag }}
+      {{ form.password.errors }}
+    </div>
+
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <p class="mt-5 mb-3 text-muted text-center">&copy; {% now 'Y' %} NerdyDevs | All Rights Reserved.</p>
+  </form>

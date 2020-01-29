@@ -1,87 +1,80 @@
 {% extends "base.html" %}    
 
 {% block content %}
-<form method="post">
+
+<form method="POST" action="">
   {% csrf_token %}
-  {{ form }}
-  <input type="submit" value="Submit">
+  <div class="form-group">
+    {{ form.business_name.label_tag }}
+    {{ form.business_name }}
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      {{ form.first_name.label_tag }}
+      {{ form.first_name }}
+    </div>
+    <div class="form-group col-md-6">
+      {{ form.last_name.label_tag }}
+      {{ form.last_name }}
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-8">
+      {{ form.address.label_tag }}
+      {{ form.address }}
+      </div>
+      <div class="form-group col-md-4">
+        {{ form.address_2.label_tag }}
+        {{ form.address_2 }}
+      </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      {{ form.city.label_tag }}
+      {{ form.city }}
+    </div>
+    <div class="form-group col-md-4">
+      {{ form.state.label_tag }}
+      {{ form.state }}
+    </div>
+    <div class="form-group col-md-2">
+      {{ form.zipcode.label_tag }}
+      {{ form.zipcode }}
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-3">
+      {{ form.mobile.label_tag }}
+      {{ form.mobile }}
+    </div>
+    <div class="form-group col-md-3">
+      {{ form.landline.label_tag }}
+      {{ form.landline }}
+    </div>
+    <div class="form-group col-md-3">
+      {{ form.email_1.label_tag }}
+      {{ form.email_1 }}
+    </div>
+    <div class="form-group col-md-3">
+      {{ form.email_2.label_tag }}
+      {{ form.email_2 }}
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      {{ form.contact.label_tag }}
+      {{ form.contact }}
+    </div>
+    <div class="form-group col-md-6">
+      {{ form.referral.label_tag }}
+      {{ form.referral }}
+    </div>
+  </div>
+  <div class="form-group">
+    {{ form.notes.label_tag }}
+    {{ form.notes }}
+  </div>
+  <input type="submit" value="Save Customer" class="btn btn-primary">
+  <button type="submit" class="btn btn-secondary">Save & Start new order <i class="fas fa-chevron-right"></i></button>
 </form>
 {% endblock %}
-        <!-- <form>
-            <div class="form-group">
-                <label for="businessName">Business Name</label>
-                <input type="text" class="form-control" id="businessName" placeholder="Bobby's Shoe Co">
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="firstName">First Name</label>
-                    <input type="text" class="form-control" id="firstName" placeholder="Bobby">
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="lastName">Last Name</label>
-                    <input type="text" class="form-control" id="lastName" placeholder="Smells">
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-8">
-                    <label for="inputAddress">Address</label>
-                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                  </div>
-                  <div class="form-group col-md-4">
-                    <label for="inputAddress2">Address 2</label>
-                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-                  </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <label for="inputCity">City</label>
-                <input type="text" class="form-control" id="inputCity" placeholder="Fort Worth">
-              </div>
-              <div class="form-group col-md-4">
-                <label for="inputState">State</label>
-                <select id="inputState" class="form-control">
-                  <option selected>Choose...</option>
-                  <option>...</option>
-                </select>
-              </div>
-              <div class="form-group col-md-2">
-                <label for="inputZip">Zip</label>
-                <input type="text" class="form-control" id="inputZip" placeholder="76179">
-              </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-3">
-                    <label for="mobile">Mobile Phone</label>
-                    <input type="tel" class="form-control" id="mobile" placeholder="555-555-5555">
-                </div>
-                <div class="form-group col-md-3">
-                    <label for="landline">Landline Phone</label>
-                    <input type="tel" class="form-control" id="landline" placeholder="555-555-5555">
-                </div>
-                <div class="form-group col-md-3">
-                    <label for="email_1">Primary Email</label>
-                    <input type="email" class="form-control" id="email_1" placeholder="bobby@example.com">
-                </div>
-                <div class="form-group col-md-3">
-                    <label for="email_2">Secondary Email</label>
-                    <input type="email" class="form-control" id="email_2" placeholder="rob@example.com">
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="contact">Contact</label>
-                    <input type="text" class="form-control" id="contact">
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="referral">Referral</label>
-                    <input type="text" class="form-control" id="referral">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="notes">Customer Notes</label>
-                <textarea class="form-control" id="notes" rows="5"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Save <i class="far fa-save"></i></button>
-            <button type="submit" class="btn btn-secondary">Save & Start new order <i class="fas fa-chevron-right"></i></button>
-          </form> -->
-
